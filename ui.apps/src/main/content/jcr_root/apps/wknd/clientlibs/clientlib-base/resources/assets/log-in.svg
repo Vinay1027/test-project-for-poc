@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="29px" viewBox="0 0 29 29" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/SVG/log-in</title>
+    <g id="Link-Bar" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Artboard" transform="translate(-38.000000, -19.000000)" stroke="#FFFFFF" stroke-width="1.5">
+            <g id="Icons/SVG/log-in" transform="translate(39.000000, 20.000000)">
+                <path d="M18,0 L24,0 C24.7956,0 25.5587,0.31607 26.1213,0.87868 C26.6839,1.44129 27,2.20435 27,3 L27,24 C27,24.7956 26.6839,25.5587 26.1213,26.1213 C25.5587,26.6839 24.7956,27 24,27 L18,27" id="Path"></path>
+                <polyline id="Path" points="10.5 21 18 13.5 10.5 6"></polyline>
+                <line x1="18" y1="13.5" x2="0" y2="13.5" id="Path"></line>
+            </g>
+        </g>
+    </g>
+</svg>

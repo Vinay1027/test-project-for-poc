@@ -1,0 +1,667 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+   data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+   data-sly-call="${clientlib.all @ categories='apps.ewcmams.components.searchjk'}" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<h1
+   style="font-weight: 700; color: rgb(235,0,40); border-bottom: 1.0px solid rgb(110,110,112); margin: 18px 0 30.0px 0; line-height: 48.0px;">
+   Forms</h1>
+<p style="margin-top: 40.0px; border-bottom: 1.0px solid rgb(110,110,112); padding-bottom: 40.0px;">Please reference the
+   contract number on each page of all forms and any accompanying correspondence. A newly completed form is required for
+   all requests. Forms that have been reused will not be honored.<br>
+   <br>
+   Jackson recognizes that information security is critical to maintaining the trust of our customers and advisors. To
+   protect customer data, some forms may be accessed only after logging into our website. Click the &quot;Sign In&quot;
+   button at the top right of this page to get started.
+</p>
+
+
+<div class="search-jk-container">
+   <div>
+      <div class="search-label container" style="margin-left: 0px !important; display: flex;">
+
+         <div class="search-textbox" style="width: 60%;">
+            <span class="search-lable-text">${properties.searchLabel @context='html'}</span>
+            <div style="display:flex; margin-bottom: 20px;">
+               <input id="searchTerm" style="width: 60%; margin-right: 10px;" type="text" placeholder="Search.."
+                  name="search">
+               <button class="resetBtn" type="reset" value="Reset"
+                  style="color: #eb0028;background: #fff;border: 2px solid #eb0028;width: 95px; margin-right:5px;">Reset</button>
+               <button class="searchBtn" type="submit"
+                  style="display: inline-block;background: #eb0028;padding: 0 10px;font-size: 1rem;font-weight: 400;line-height: 1.6rem;color: #fff;border: 2px solid #eb0028;width: 95px;">Search</button>
+            </div>
+            <span class="filter-lable-text"><b>Filter By:</b></span>
+            <ul class="form horizontal clearfix" style="display: flex; padding-left: 0;">
+               <li class="productType" style="margin-right: 20px; list-style-type: none !important;">
+                  <label id="formsForm:j_idt96" class="ui-outputlabel ui-widget"
+                     for="formsForm:productTypeFilter_focus">Product Type</label>
+                  <div id="formsForm:productTypeFilter"
+                     class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" style="min-width: 209px;">
+                     <div class="ui-helper-hidden-accessible">
+                        <select id="formsForm:productTypeFilter_input" name="formsForm:productTypeFilter_input"
+                           tabindex="-1" aria-hidden="true">
+                           <option value="" selected="selected">All</option>
+                           <option value="Fixed Annuity">Fixed Annuity</option>
+                           <option value="Indexed Annuity">Indexed Annuity</option>
+                           <option value="Life">Life</option>
+                           <option value="Reg Index-Linked Annuity">Reg Index-Linked Annuity</option>
+                           <option value="Variable Annuity">Variable Annuity</option>
+                        </select>
+                     </div>
+                     <div class="ui-selectonemenu-trigger ui-state-default ui-corner-right">
+                        <span class="ui-icon ui-icon-triangle-1-s ui-c"></span>
+                     </div>
+                  </div>
+               </li>
+               <li class="productName" style=" list-style-type: none !important;">
+                  <label id="formsForm:j_idt100" class="ui-outputlabel ui-widget"
+                     for="formsForm:productNameFilter_focus">Product Name</label>
+                  <div id="formsForm:productNameFilter"
+                     class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" style="min-width: 345px;">
+                     <div class="ui-helper-hidden-accessible">
+                        <select id="formsForm:productNameFilter_input" name="formsForm:productNameFilter_input"
+                           tabindex="-1" aria-hidden="true">
+                           <option value="" selected="selected">All</option>
+                           <option value="Action">Action</option>
+                           <option value="Action (NY)">Action (NY)</option>
+                           <option value="Action 2">Action 2</option>
+                           <option value="Action 200 (NY only)">Action 200 (NY only)</option>
+                           <option value="Action 7 (NY only)">Action 7 (NY only)</option>
+                           <option value="Action One">Action One</option>
+                           <option value="Advisor VUL">Advisor VUL</option>
+                           <option value="Annuitized Fixed Annuity">Annuitized Fixed Annuity</option>
+                           <option value="Bonus Max">Bonus Max</option>
+                           <option value="Bonus Max One">Bonus Max One</option>
+                           <option value="Bonus Max Two">Bonus Max Two</option>
+                           <option value="Brooke Life Annuities">Brooke Life Annuities</option>
+                           <option value="Brooke Life Ins Co - Partner 5">Brooke Life Ins Co - Partner 5</option>
+                           <option value="Brooke Life Ins Co-Credit Union ONE only">Brooke Life Ins Co-Credit Union ONE
+                              only</option>
+                           <option value="Brooke Life Ins Co-DFCU Unity Plus only">Brooke Life Ins Co-DFCU Unity Plus
+                              only</option>
+                           <option value="Brooke Life Ins.Co-Citizens Bank Only">Brooke Life Ins.Co-Citizens Bank Only
+                           </option>
+                           <option value="Curiangard Simplified Retirement Annuity">Curiangard Simplified Retirement
+                              Annuity</option>
+                           <option value="Decreasing Term">Decreasing Term</option>
+                           <option value="Defined Strategies">Defined Strategies</option>
+                           <option value="ELI 500/ELI Multi Index Deferred Annuity">ELI 500/ELI Multi Index Deferred
+                              Annuity</option>
+                           <option value="ELITE 500 Equity Indexed Annuity">ELITE 500 Equity Indexed Annuity</option>
+                           <option value="ELITE 90">ELITE 90</option>
+                           <option value="ELITE 90 MCI">ELITE 90 MCI</option>
+                           <option value="ELITE Choice">ELITE Choice</option>
+                           <option value="ELITE Choice Rewards">ELITE Choice Rewards</option>
+                           <option value="Elite Access">Elite Access</option>
+                           <option value="Elite Access Advisory">Elite Access Advisory</option>
+                           <option value="Elite Access Advisory II">Elite Access Advisory II</option>
+                           <option value="Elite Access Brokerage Edition">Elite Access Brokerage Edition</option>
+                           <option value="Elite Access II">Elite Access II</option>
+                           <option value="Elite Annual Reset Annuity">Elite Annual Reset Annuity</option>
+                           <option value="Fifth Third Perspective (5/3 Bank Only)">Fifth Third Perspective (5/3 Bank
+                              Only)</option>
+                           <option value="Fixed Annuity">Fixed Annuity</option>
+                           <option value="Generations UL">Generations UL</option>
+                           <option value="Generations ULC">Generations ULC</option>
+                           <option value="Immediate Annuity">Immediate Annuity</option>
+                           <option value="Jackson Accumulator UL">Jackson Accumulator UL</option>
+                           <option value="Jackson Advantage">Jackson Advantage</option>
+                           <option value="Jackson AscenderPlus">Jackson AscenderPlus</option>
+                           <option value="Jackson AscenderPlus Select">Jackson AscenderPlus Select</option>
+                           <option value="Jackson Assure WL (conversion only)">Jackson Assure WL (conversion only)
+                           </option>
+                           <option value="Jackson Assure Whole Life">Jackson Assure Whole Life</option>
+                           <option value="Jackson Fixed Index-Linked Stretch Option">Jackson Fixed Index-Linked Stretch
+                              Option</option>
+                           <option value="Jackson Level Premium Whole Life">Jackson Level Premium Whole Life</option>
+                           <option value="Jackson Market Link Pro">Jackson Market Link Pro</option>
+                           <option value="Jackson Market Link Pro Advisory">Jackson Market Link Pro Advisory</option>
+                           <option value="Jackson Market Link Pro Advisory II">Jackson Market Link Pro Advisory II
+                           </option>
+                           <option value="Jackson Market Link Pro II">Jackson Market Link Pro II</option>
+                           <option value="Jackson Private Wealth">Jackson Private Wealth</option>
+                           <option value="Jackson RateProtector">Jackson RateProtector</option>
+                           <option value="Jackson Retirement Investment Annuity">Jackson Retirement Investment Annuity
+                           </option>
+                           <option value="LOG Annuity Products">LOG Annuity Products</option>
+                           <option value="LOG Life Products">LOG Life Products</option>
+                           <option value="Lifeline Term">Lifeline Term</option>
+                           <option value="MarketProtector">MarketProtector</option>
+                           <option value="MarketProtector Advisory">MarketProtector Advisory</option>
+                           <option value="MarketProtector Advisory III">MarketProtector Advisory III</option>
+                           <option value="MarketProtector III">MarketProtector III</option>
+                           <option value="Max">Max</option>
+                           <option value="Max One">Max One</option>
+                           <option value="Max One XL">Max One XL</option>
+                           <option value="Max Tax Saver">Max Tax Saver</option>
+                           <option value="Max XL">Max XL</option>
+                           <option value="OptiMAX NY (NY only)">OptiMAX NY (NY only)</option>
+                           <option value="Optimax">Optimax</option>
+                           <option value="Optimax 100">Optimax 100</option>
+                           <option value="Optimax 125">Optimax 125</option>
+                           <option value="Optimax 2">Optimax 2</option>
+                           <option value="Optimax 200">Optimax 200</option>
+                           <option value="Optimax 3">Optimax 3</option>
+                           <option value="Optimax 4">Optimax 4</option>
+                           <option value="Optimax 5">Optimax 5</option>
+                           <option value="Optimax 53 (5/3 Bank Only)">Optimax 53 (5/3 Bank Only)</option>
+                           <option value="Optimax 6">Optimax 6</option>
+                           <option value="Optimax Level Rate One">Optimax Level Rate One</option>
+                           <option value="Optimax Level Rate Two">Optimax Level Rate Two</option>
+                           <option value="Optimax NY Level Rate (NY only)">Optimax NY Level Rate (NY only)</option>
+                           <option value="Optimax One">Optimax One</option>
+                           <option value="Pathfinder">Pathfinder</option>
+                           <option value="Pathfinder (NY only)">Pathfinder (NY only)</option>
+                           <option value="Perspective">Perspective</option>
+                           <option value="Perspective Advantage">Perspective Advantage</option>
+                           <option value="Perspective Advantage(CT)">Perspective Advantage(CT)</option>
+                           <option value="Perspective Advisors">Perspective Advisors</option>
+                           <option value="Perspective Advisors II">Perspective Advisors II</option>
+                           <option value="Perspective Advisory">Perspective Advisory</option>
+                           <option value="Perspective Advisory II">Perspective Advisory II</option>
+                           <option value="Perspective Focus">Perspective Focus</option>
+                           <option value="Perspective II">Perspective II</option>
+                           <option value="Perspective Investor (VUL)">Perspective Investor (VUL)</option>
+                           <option value="Perspective L Series">Perspective L Series</option>
+                           <option value="Perspective Rewards">Perspective Rewards</option>
+                           <option value="Protector 10-Year Term">Protector 10-Year Term</option>
+                           <option value="Protector 15-Year Term">Protector 15-Year Term</option>
+                           <option value="Protector 20-Year Term">Protector 20-Year Term</option>
+                           <option value="Protector 30-Year Term">Protector 30-Year Term</option>
+                           <option value="Renewable Term">Renewable Term</option>
+                           <option value="Retirement Latitudes-Raymond James ONLY">Retirement Latitudes-Raymond James
+                              ONLY</option>
+                           <option value="SLD Life Products">SLD Life Products</option>
+                           <option value="Select Annual Reset Annuity">Select Annual Reset Annuity</option>
+                           <option value="SuperMax">SuperMax</option>
+                           <option value="SuperMax XL">SuperMax XL</option>
+                           <option value="Target Select">Target Select</option>
+                           <option value="Ultimate Investor VUL">Ultimate Investor VUL</option>
+                           <option value="Ultimate Plan">Ultimate Plan</option>
+                           <option value="Universal Life">Universal Life</option>
+                           <option value="Whole Life">Whole Life</option>
+                           <option value="Yearly Renewable Term">Yearly Renewable Term</option>
+                        </select>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+            <ul class="form horizontal clearfix" style="display: flex; padding-left: 0;">
+               <li class="transactionType" style="margin-right: 20px; list-style-type: none !important;">
+                  <label id="formsForm:j_idt104" class="ui-outputlabel ui-widget"
+                     for="formsForm:transactionTypeFilter_focus">Transaction Type</label>
+                  <div id="formsForm:transactionTypeFilter"
+                     class="ui-selectonemenu ui-widget ui-state-default ui-corner-all" style="min-width: 242px;">
+                     <div class="ui-helper-hidden-accessible"><select id="formsForm:transactionTypeFilter_input"
+                           name="formsForm:transactionTypeFilter_input" tabindex="-1" aria-hidden="true">
+                           <option value="" selected="selected">All</option>
+                           <option value="Account Changes">Account Changes</option>
+                           <option value="Claims">Claims</option>
+                           <option value="Life Insurance Policy Changes">Life Insurance Policy Changes</option>
+                           <option value="Loans">Loans</option>
+                           <option value="Other Transactions">Other Transactions</option>
+                           <option value="Payments &amp; Deposits">Payments &amp; Deposits</option>
+                           <option value="Withdrawal">Withdrawal</option>
+                        </select></div>
+                  </div>
+               </li>
+               <li class="state" style=" list-style-type: none !important;"><label id="formsForm:j_idt108" class="ui-outputlabel ui-widget"
+                     for="formsForm:stateFilter_focus">State</label>
+                  <div id="formsForm:stateFilter" class="ui-selectonemenu ui-widget ui-state-default ui-corner-all"
+                     style="min-width: 164px;">
+                     <div class="ui-helper-hidden-accessible"><select id="formsForm:stateFilter_input"
+                           name="formsForm:stateFilter_input" tabindex="-1" aria-hidden="true">
+                           <option value="" selected="selected">All</option>
+                           <option value="AL">Alabama</option>
+                           <option value="AK">Alaska</option>
+                           <option value="AZ">Arizona</option>
+                           <option value="AR">Arkansas</option>
+                           <option value="CA">California</option>
+                           <option value="CO">Colorado</option>
+                           <option value="CT">Connecticut</option>
+                           <option value="DC">District of Columbia</option>
+                           <option value="DE">Delaware</option>
+                           <option value="FL">Florida</option>
+                           <option value="GA">Georgia</option>
+                           <option value="HI">Hawaii</option>
+                           <option value="ID">Idaho</option>
+                           <option value="IL">Illinois</option>
+                           <option value="IN">Indiana</option>
+                           <option value="IA">Iowa</option>
+                           <option value="KS">Kansas</option>
+                           <option value="KY">Kentucky</option>
+                           <option value="LA">Louisiana</option>
+                           <option value="ME">Maine</option>
+                           <option value="MD">Maryland</option>
+                           <option value="MA">Massachusetts</option>
+                           <option value="MI">Michigan</option>
+                           <option value="MN">Minnesota</option>
+                           <option value="MS">Mississippi</option>
+                           <option value="MO">Missouri</option>
+                           <option value="MT">Montana</option>
+                           <option value="NE">Nebraska</option>
+                           <option value="NV">Nevada</option>
+                           <option value="NH">New Hampshire</option>
+                           <option value="NJ">New Jersey</option>
+                           <option value="NM">New Mexico</option>
+                           <option value="NY">New York</option>
+                           <option value="NC">North Carolina</option>
+                           <option value="ND">North Dakota</option>
+                           <option value="OH">Ohio</option>
+                           <option value="OK">Oklahoma</option>
+                           <option value="OR">Oregon</option>
+                           <option value="PA">Pennsylvania</option>
+                           <option value="RI">Rhode Island</option>
+                           <option value="SC">South Carolina</option>
+                           <option value="SD">South Dakota</option>
+                           <option value="TN">Tennessee</option>
+                           <option value="TX">Texas</option>
+                           <option value="UT">Utah</option>
+                           <option value="VT">Vermont</option>
+                           <option value="VA">Virginia</option>
+                           <option value="WA">Washington</option>
+                           <option value="WV">West Virginia</option>
+                           <option value="WI">Wisconsin</option>
+                           <option value="WY">Wyoming</option>
+                        </select>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </div>
+
+         <div class="side-menu" style="width: 40%; overflow: hidden; margin-bottom: 40px;">
+            <div class="contentCard" style="margin-left: 152px; margin-bottom: 40px; overflow: hidden;">
+               <h3 style="padding: 0 20px; background: #F1ECE9; font-size: 1.3rem; font-weight: 700; line-height: 3.6rem; color: #5C2642; margin: 0; z-index: 1;">Pre-filled Forms</h3>
+               <div class="content" style="padding-bottom: 5px; border: 2px solid #F1ECE9; border-top: none; background: #FFF; line-height: 1.5; padding: 25px 20px 13px 20px; overflow: hidden;">
+                  <p>
+                     <a href="/login/login.xhtml">Sign In</a> to pre-fill the contract number and owner name.
+                  </p>
+                  <p>
+                     <strong><em>Note:</em></strong> Not available for all forms
+                  </p>
+                  <a href="/frequently-asked-questions.html">Have questions?</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <div>
+      <p id="message" style="margin-top: 22px;font-size: larger;"></p>
+   </div>
+   <div class="table-container" style="margin-top:20px;">
+      <table style="width: 100%;">
+         <tbody>
+            <tr>
+               <th colspan="8"
+                  style="margin-top: 45px;background: #5C2642;color: #F1ECE9;font-size: 1.9rem;font-weight:600;line-height: 4.6rem;z-index: 1;padding: 0 20px; font-weight:500;">
+                  Form Search Results</th>
+            </tr>
+            <tr
+               style="display: table-row;vertical-align: inherit;border-color: inherit;border-left: 0;border-right: 0;text-shadow: none !important;">
+               <th
+                  style="width: 93px;border-right: none;font-size: 1rem;text-align: center;background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Select All <input type="checkbox"></th>
+               <th
+                  style="border-left: none;background: #DBCFC7;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Name</th>
+               <th
+                  style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;width: 380px;">
+                  Description</th>
+               <th
+                  style="width: 139px;cursor: pointer;background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Transaction Type</th>
+               <th
+                  style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;">
+                  Form Number</th>
+               <th
+                  style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;">
+                  State</th>
+               <th
+                  style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;">
+                  Email</th>
+               <th style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;"
+                  onclick="downloadPdf(this)">
+                  Download</th>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline; font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/accelerated-benefit-claim-alaska-arizona.html">
+                     Accelerated Benefit Claim</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Complete to file an accelerated benefit claim.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Claims</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Z1361 10/22</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  AK, AL, AR, AZ, CA</td>
+               <td class="email-icon">
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-alaska-arizona.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline; font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html">
+                     Accelerated Benefit Claim</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Complete to file an accelerated benefit claim.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Claims</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NZ1361 10/22</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NY</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/accelerated-benefit-claim-vancouver.html">
+                     Accelerated Benefit Claim</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Describes MIB and explains consumer's rights to receive a copy of their record</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Life Insurance Policy Changes</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  XADV9055 10/22</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  AK, AL, AR, CA</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/activation-of-lifetime-income-benefit-request.html">
+                     Activation of Lifetime Income Benefit Request</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use this form to activate a Lifetime Income Benefit.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Other Transactions</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  X4391 06/20</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  AK, AL, AR, AZ, CA</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a
+                     href="/content/brightspeed/us/en/add-on-benefit-election-termination-guaranteed-minimum-withdraw-.html">
+                     Add-on Benefit Election/Termination Guaranteed Minimum Withdraw Benefit</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use this form to add or terminate a GMWB.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Other Transactions</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  V4390 08/23</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  AK, AL, AR, AZ, CA</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a
+                     href="/content/brightspeed/us/en/add-on-benefit-election-termination-guaranteed-minimum-withdraw-.html">
+                     Add-on Benefit Election/Termination Guaranteed Minimum Withdraw Benefit</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use this form to add or terminate a Lifetime Income Rider or Lifetime Income Benefit.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Other Transactions</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  X4390 06/20</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  AK, AL, AR, AZ, CA</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a
+                     href="/content/brightspeed/us/en/add-on-benefit-election-termination-guaranteed-minimum-withdraw-.html">
+                     Add-on Benefit Election/Termination Guaranteed Minimum Withdraw Benefit</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use this form to add a GMWB.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Other Transactions</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NV4390 08/23</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NY</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/affidavit-of-lost-policy.html">
+                     Affidavit of LOST POLICY</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use this form when a policy/contract is lost.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Other Transactions</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  N2028 04/15</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NY</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/affidavit-of-lost-policy.html">
+                     Affidavit of LOST POLICY</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use this form when a policy/contract is lost.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Other Transactions</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  X2028 01/21</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  AK, AL, AR, AZ, CA</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline; font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/annuity-direct-deposit-request-new-jersey.html">
+                     Annuity Direct Deposit Request</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use to set up or change bank information for direct deposit into client's bank account.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Payments & Deposits, Withdrawal</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  N1091 07/17</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NY</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+            <tr>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <input type="checkbox">
+               </td>
+               <td
+                  style="border-left: none;color: #000;text-decoration: underline; font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <a href="/content/brightspeed/us/en/life-insurance-claim-form.html">
+                     Life Insurance Claim Form</a>
+               </td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+                  Use to set up or change bank information for direct deposit into client's bank account.</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  Payments & Deposits, Withdrawal</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  N1091 07/17</td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  NY</td>
+               <td class="email-icon"></td>
+               <td
+                  style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+                  <button class="download-button"
+                     data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-new-york.html"
+                     onclick="downloadPdf(this)">Download</button>
+               </td>
+            </tr>
+         </tbody>
+      </table>
+   </div>
+</div>

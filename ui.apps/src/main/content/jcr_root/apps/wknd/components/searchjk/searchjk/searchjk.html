@@ -1,0 +1,277 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"
+   data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+   data-sly-call="${clientlib.all @ categories='apps.ewcmams.components.searchjk'}" />
+<div class="search-jk-container">
+   <div class="search-label">
+      <span class="search-lable-text">${properties.searchLabel @context='html'}</span>
+   </div>
+   <div class="search-textbox">
+      <input id="searchTerm" style="width: 485px" type="text" placeholder="Search.." name="search">
+      <button type="reset" value="Reset">Reset</button>
+      <button class="searchBtn" type="submit">Search</button>
+   </div>
+<div class="table-label"
+   style="margin-top: 45px;background: #5C2642;color: #F1ECE9;font-size: 1.9rem;font-weight:600;line-height: 4.6rem;position: relative;z-index: 1;padding: 0 20px;">
+   <span class="table-lable-text">${properties.tableLabel @context='html'}</span>
+</div>
+<div class="table-container">
+   <table style="width: 100%;">
+      <tbody>
+         <tr
+            style="display: table-row;vertical-align: inherit;border-color: inherit;border-left: 0;border-right: 0;text-shadow: none !important;">
+            <th
+               style="width: 93px;border-right: none;font-size: 1rem;text-align: center;background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Select All <input type="checkbox"></th>
+            <th
+               style="border-left: none;background: #DBCFC7;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Name</th>
+            <th
+               style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;width: 380px;">
+               Description</th>
+            <th
+               style="width: 139px;cursor: pointer;background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Transaction Type</th>
+            <th
+               style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;">
+               Form Number</th>
+            <th
+               style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;">
+               State</th>
+            <th
+               style="background: #F1ECE9;color: #333333;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;cursor: pointer;">
+               Email</th>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Accelerated Benefit Claim</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Complete to file an accelerated benefit claim.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Claims</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Z1361 10/22</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               AK, AL, AR, AZ, CA</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Accelerated Benefit Claim</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Complete to file an accelerated benefit claim.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Claims</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               NZ1361 10/22</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               NY</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               A Consumer's Guide to MIB's Underwriting Services</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Describes MIB and explains consumer's rights to receive a copy of their record</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Life Insurance Policy Changes</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               XADV9055 10/22</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               AK, AL, AR, CA</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Activation of Lifetime Income Benefit Request</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use this form to activate a Lifetime Income Benefit.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Other Transactions</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               X4391 06/20</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               AK, AL, AR, AZ, CA</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Add-on Benefit Election/Termination Guaranteed Minimum Withdrae Benefit</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use this form to add or terminate a GMWB.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Other Transactions</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               V4390 08/23</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               AK, AL, AR, AZ, CA</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Add-on Benefit Election/Termination Guaranteed Minimum Withdrae Benefit</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use this form to add or terminate a Lifetime Income Rider or Lifetime Income Benefit.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Other Transactions</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               X4390 06/20</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               AK, AL, AR, AZ, CA</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Add-on Benefit Election/Termination Guaranteed Minimum Withdrae Benefit</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use this form to add a GMWB.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Other Transactions</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               NV4390 08/23</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               NY</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Affidavit of LOST POLICY</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use this form when a policy/contract is lost.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Other Transactions</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               N2028 04/15</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               NY</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Affidavit of LOST POLICY</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use this form when a policy/contract is lost.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Other Transactions</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               X2028 01/21</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               AK, AL, AR, AZ, CA</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+         <tr>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Annuity Direct Deposit Request</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;width: 380px">
+               Use to set up or change bank information for direct deposit into client's bank account.</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               Payments & Deposits, Withdrawal</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               N1091 07/17</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               NY</td>
+            <td
+               style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
+               <input type="checkbox"></td>
+         </tr>
+      </tbody>
+   </table>
+</div>
+</div>

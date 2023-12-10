@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="19px" viewBox="0 0 23 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/SVG/chevrons-right</title>
+    <g id="Business_Solution_Hi_Fidelity" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="D2-BizSolutions-D-1366-Option-1-(sign-in-bar)" transform="translate(-213.000000, -2998.000000)" stroke="#FEFEFE" stroke-width="1.5">
+            <g id="Group-3" transform="translate(88.000000, 2988.000000)">
+                <g id="Icons/SVG/chevrons-right" transform="translate(126.000000, 11.000000)">
+                    <polyline id="Path" points="12.25 17 21 8.5 12.25 0"></polyline>
+                    <polyline id="Path" points="0 17 8.75 8.5 0 0"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

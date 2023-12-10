@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+    jcr:primaryType="cq:Template">
+    <jcr:content
+        cq:lastModified="{Date}2023-12-10T11:41:33.108-08:00"
+        cq:lastModifiedBy="admin"
+        cq:templateType="/conf/wknd/settings/wcm/template-types/html5page"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="Content Page"
+        status="enabled"/>
+</jcr:root>
