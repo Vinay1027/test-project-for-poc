@@ -1,6 +1,6 @@
 //Function to redirect to homepage after login
 var getRedirectPath = function() {
-	return "/content/brightspeed/us/en/test.html";
+	return "/content/wknd/us/en/jackson-home-page.html";
 }
 var userData;
 // Make a call to servlet to fetch user details
@@ -40,7 +40,7 @@ var fetchUserDetails = function(user) {
 				if (userData.street) {
 					setCookie("user_street", userData.street, 30);
 				}
-				alert(getCookie("user_fName"));
+				//alert(getCookie("user_fName"));
 
 			}
 		},
@@ -145,7 +145,7 @@ $(function() {
 				success: function(data, textStatus, jqXHR) {
 					//console.log(data);
 					// alert(data);
-					alert('loggedIn Successfully');
+					//alert('loggedIn Successfully');
 					fetchUserDetails($("#userId").val());
 					window.location.href = getRedirectPath();
 				},

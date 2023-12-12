@@ -8,7 +8,7 @@ const passwordInput = document.getElementById('password');
 // Show the login popup
 function showPopup() {
     //loginPopup.style.display = 'block';
-    window.location.href="/content/brightspeed/us/en/jakson-log-in.html";
+    window.location.href="/content/wknd/us/en/jackson-log-in.html";
 }
 
 // Close the login popup

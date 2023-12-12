@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Check if the cookie exists
-    var userCookie = getCookie("custom_usr");
+    var userCookie = getCookie("user_fName");
 
     if (userCookie !== "") {
         // The cookie exists, so set the display property to block

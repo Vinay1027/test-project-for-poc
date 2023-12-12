@@ -7,7 +7,7 @@
        console.log("Inside Init Variables ", this.$elem);
        this.$search = $('.searchBtn');
          this.$reset = $('.resetBtn');
-       this.searchPath = '/content/brightspeed/us/en';
+       this.searchPath = '/content/wknd/us/en';
        this.$tableDataContainer = this.$elem.find('.table-container tbody');
      };
      this.bindEvents = function () {
@@ -74,7 +74,7 @@
                  <td class="email-icon"></td>
                   <td
                      style="border-left: none;color: #000;font-size: 1rem;width: 127px;cursor: pointer;text-align: left;padding: 0 8px;height: 45px;border: 1px solid #cbcbcb;">
-                     <button class="download-button" data-download-url="/content/brightspeed/us/en/accelerated-benefit-claim-alaska-arizona.html" onclick="downloadPdf(this)">Download</button></td>
+                     <button class="download-button" data-download-url="/content/wknd/us/en/accelerated-benefit-claim-alaska-arizona.html" onclick="downloadPdf(this)">Download</button></td>
               </tr>`;
                  searchResultDataList.push(searchResultData);
                });
